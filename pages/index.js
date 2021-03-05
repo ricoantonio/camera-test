@@ -18,16 +18,16 @@ export default function Home() {
 
   return (
     <>
-      <Webcam
+      {/* <Webcam
         audio={false}
         height={720}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         width={1280}
         videoConstraints={videoConstraints}
-      />
+      /> */}
       <input type="file" accept="image/*" capture="environment"></input>
-      <button onClick={capture}>Capture photo</button>
+      {/* <button onClick={capture}>Capture photo</button> */}
     </>
   );
 }
