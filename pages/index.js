@@ -26,6 +26,7 @@ export default function Home() {
         width={1280}
         videoConstraints={videoConstraints}
       />
+      <input type="file" accept="image/*" capture="environment"></input>
       <button onClick={capture}>Capture photo</button>
     </>
   );
