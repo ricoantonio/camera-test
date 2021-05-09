@@ -1,0 +1,232 @@
+.datepicker__label {
+  display: block;
+  color: black;
+  margin-bottom: 5px;
+}
+.datepicker__container {
+  position: relative;
+}
+.datepicker__container .datepicker .datepicker__input {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 1px solid gray;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  color: white;
+  height: 20px;
+  font-size: 12px;
+}
+.datepicker__container .datepicker .datepicker__input::placeholder {
+  color: gray;
+}
+.datepicker__container .datepicker .datepicker__input:focus {
+  border-color: green;
+  border-width: 1px;
+}
+.datepicker__container .datepicker .datepicker__input:hover {
+  border-color: green;
+}
+.datepicker__container .datepicker .datepicker__input:hover {
+  border-width: 1px;
+}
+.datepicker__container .datepicker .datepicker__input:invalid {
+  box-shadow: none;
+}
+.datepicker__container .datepicker .datepicker__input.invalid {
+  border: 1px solid red;
+}
+.datepicker__container .datepicker .datepicker__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  padding: 8px 8px 0 8px;
+}
+.datepicker__container .datepicker .datepicker__icon.disabled_icon {
+  cursor: default;
+}
+.datepicker__container .datepicker__content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  overflow: auto;
+  background-color: white;
+  transition: 250ms ease;
+  border-radius: 6px;
+  border: solid thin gray;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  margin-top: 43px;
+  padding: 1em;
+  min-width: 270px;
+}
+.datepicker__container .datepicker__content.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.datepicker__container .datepicker__content .datepicker__header {
+  display: flex;
+  text-align: center;
+}
+.datepicker__container .datepicker__content .datepicker__header a {
+  color: unset;
+}
+.datepicker__container .datepicker__content .datepicker__header .prev,
+.datepicker__container .datepicker__content .datepicker__header .right,
+.datepicker__container .datepicker__content .datepicker__header .center {
+  padding: 2px;
+  border-radius: 6px;
+  user-select: none;
+  flex-grow: 1;
+}
+.datepicker__container .datepicker__content .datepicker__header .prev,
+.datepicker__container .datepicker__content .datepicker__header .right {
+  cursor: pointer;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .day_names {
+  display: flex;
+  user-select: none;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .day_names
+  .day_name {
+  font-weight: bold;
+  width: 14.2%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number {
+  width: 14.2%;
+  height: 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  color: unset;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number:hover {
+  background-color: gray;
+  border-radius: 6px;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number
+  .date_number_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.holiday {
+  color: red;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.activeNow {
+  background-color: green;
+  color: white !important;
+  border-radius: 6px;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.activeNow
+  ::before {
+  content: "Today";
+  position: absolute;
+  top: -1px;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.inactive {
+  color: gray;
+  cursor: default;
+  pointer-events: none;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.inactive:hover {
+  background-color: unset;
+  border-radius: unset;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.inactive.holiday {
+  color: #fff;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .date_number.selected {
+  background-color: blue;
+  color: white;
+  border-radius: border-radius;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .new_row_wrapper {
+  display: initial;
+}
+.datepicker__container
+  .datepicker__content
+  .datepicker__days
+  .weekdays
+  .date_numbers
+  .new_row_wrapper
+  .new_row {
+  display: block;
+}
